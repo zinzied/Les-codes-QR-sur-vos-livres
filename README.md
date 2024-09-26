@@ -3,6 +3,8 @@
 
 This project is about application for generating and managing QR codes for library Books with a data base . It includes a graphical user interface (GUI) for user interaction and manages a database connection to store or retrieve relevant data and can print the codes Qrs generated on Sheet A4 . 
 its a simple project to can save the books by name and author and the year of production , this project can be added more features and Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
+![image](https://github.com/user-attachments/assets/102fc2c5-797a-4989-a8c6-ed552ea4b809)
+
 
 ## Features
 
