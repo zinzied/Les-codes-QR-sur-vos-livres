@@ -4,11 +4,11 @@ class QRCodeWindow(QtWidgets.QWidget):
     def __init__(self, pixmaps):
         super().__init__()
         self.initUI(pixmaps)
-    
+
     def initUI(self, pixmaps):
-        self.setWindowTitle('QR Codes')
+        self.setWindowTitle('📱 QR Codes Viewer')
         layout = QtWidgets.QVBoxLayout()
-        
+
         grid_layout = QtWidgets.QGridLayout()
         row = 0
         col = 0
@@ -20,20 +20,24 @@ class QRCodeWindow(QtWidgets.QWidget):
             if col == 4:  # Change this value to adjust the number of QR codes per row
                 col = 0
                 row += 1
-        
+
         layout.addLayout(grid_layout)
-        
-        print_button = QtWidgets.QPushButton('Print QR Codes', self)
+
+        print_button = QtWidgets.QPushButton('🖨️ Print QR Codes', self)
+        print_button.setFixedWidth(250)  # Set fixed width
         print_button.clicked.connect(self.print_qr_codes)
-        layout.addWidget(print_button)
-        
+        button_layout = QtWidgets.QHBoxLayout()
+        button_layout.addWidget(print_button)
+        button_layout.setAlignment(QtCore.Qt.AlignCenter)
+        layout.addLayout(button_layout)
+
         self.setLayout(layout)
         self.resize(600, 400)
-    
+
     def print_qr_codes(self):
         printer = QtPrintSupport.QPrinter()
         dialog = QtPrintSupport.QPrintDialog(printer, self)
-        
+
         if dialog.exec_() == QtWidgets.QDialog.Accepted:
             painter = QtGui.QPainter(printer)
             rect = painter.viewport()
