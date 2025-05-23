@@ -3,7 +3,8 @@
 
 A modern, feature-rich application for generating and managing QR codes for library books. This application provides a user-friendly interface for creating, storing, and managing QR codes for books with comprehensive book information. The application includes a database for persistent storage and offers various customization options for QR codes.
 
-![QR Code Book Manager Screenshot](https://github.com/user-attachments/assets/102fc2c5-797a-4989-a8c6-ed552ea4b809)
+<img width="954" alt="image" src="https://github.com/user-attachments/assets/01079a95-0d56-4040-93c6-d1f4938a411b" />
+
 
 ## ✨ Features
 
